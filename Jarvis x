@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Jarvis X</title>
+<style>
+body {
+  background: black;
+  color: lime;
+  font-family: Arial;
+  text-align: center;
+}
+h1 {
+  margin-top: 50px;
+}
+input {
+  width: 70%;
+  padding: 12px;
+  font-size: 16px;
+}
+button {
+  padding: 12px 20px;
+  background: lime;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+#response {
+  margin-top: 20px;
+  font-size: 18px;
+}
+</style>
+</head>
+<body>
+
+<h1>🤖 Jarvis X</h1>
+<p>Hello Boss 😎</p>
+
+<input type="text" id="command" placeholder="Type command...">
+<button onclick="runJarvis()">Send</button>
+
+<div id="response"></div>
+
+<script>
+function runJarvis() {
+  var input = document.getElementById("command").value;
+  var output = document.getElementById("response");
+
+  if (input.toLowerCase() == "hello") {
+    output.innerHTML = "Hello Boss 😎";
+  }
+  else if (input.toLowerCase() == "who are you") {
+    output.innerHTML = "I am Jarvis X, your personal AI 🤖";
+  }
+  else if (input.toLowerCase() == "time") {
+    output.innerHTML = new Date().toLocaleTimeString();
+  }
+  else {
+    output.innerHTML = "Command not recognized ❌";
+  }
+}
+</script>
+
+</body>
+</html>
