@@ -1,6 +1,4 @@
-OPENAI_API_KEYsk-proj-dVLtT6jfu1AaW2eKuV1uv-2n_BeTrXKjAf177iuNBF5aVfc2DNEFJIIX3mVRFGfy6Dexvbe9bDT3BlbkFJonL25ZZQKKmCw6ETSDJwHP0oYvGj_hkzQxvcj9fSvnbn8m8Sf3AISuv-AuNIqGh_2s5rjaEFQA<!DOCTYPE html>
-<html>
-<head>
+
   <title>AI Ad Generator Pro</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
