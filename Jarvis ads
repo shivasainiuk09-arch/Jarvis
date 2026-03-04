@@ -1,0 +1,41 @@
+jarvis-ai-new/
+│
+├── index.html
+├── vercel.json
+└── api/
+      └── generate.js<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jarvis AI Ad Generator</title>
+</head>
+<body>
+<h1>Jarvis AI Ad Generator</h1>
+<form id="adForm">
+  <input type="text" name="business" placeholder="Business Name" required><br>
+  <input type="text" name="product" placeholder="Product/Service" required><br>
+  <input type="text" name="offer" placeholder="Offer" required><br>
+  <input type="text" name="audience" placeholder="Audience" required><br>
+  <input type="text" name="city" placeholder="City" required><br>
+  <button type="submit">Generate Ad</button>
+</form>
+<pre id="result"></pre>
+
+<script>
+document.getElementById('adForm').addEventListener('submit', async e => {
+  e.preventDefault();
+  const formData = new FormData(e.target);
+  const data = Object.fromEntries(formData.entries());
+  
+  const res = await fetch('/api/generate', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(data)
+  });
+  const json = await res.json();
+  document.getElementById('result').textContent = JSON.stringify(json.result, null, 2);
+});
+</script>
+</body>
+</html>
